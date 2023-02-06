@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/src/image/chesca_logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Chesca Chen's Car Rentals</title>
+</head>
+<body>
+
+     <!-- Navbar -->
+<nav id="header" class="relative px-4 md:px-12 flex justify-between items-center bg-white shadow-sm">
+  <a class="home flex items-center text-3xl font-bold leading-none"  href="{{url('/')}}">
+      <img src="./assets/image/Chesca_logo.svg" class="h-20 md:h-[5.5rem]" alt="Chesca Logo">
+  </a>
+  <!-- menu icon -->
+  <div class="lg:hidden">
+      <button class="navbar-burger flex items-center p-3 focus:outline-none focus:text-gray-50">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-justified" width="30" height="30" 
+      viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="16" y2="18" />
+      </svg>
+      </button>
+  </div>
+  <!-- Nav List -->
+  <ul class="nav-list-container">
+      <li>
+      <a class="home nav-list hover-nav" href="{{url('/')}}">Home</a>
+      </li>
+      <li>
+      <a class="cars nav-list hover-nav" href="{{url('/cars')}}">Cars</a>    
+      </li>
+      <li>
+      <a class="about nav-list hover-nav" href="{{url('/about')}}">About Us</a>
+      </li>
+      <li>
+      <a class="contact nav-list hover-nav" href="{{url('/contact')}}">Contacts</a>
+      </li>
+  </ul>
+  <!-- Login and sign up button -->
+  <div class="hidden lg:flex justify-between">
+      
+          
+      <!-- Profile -->
+      <!-- remove hidden class and add flex to view  -->
+      <div class=" hidden items-center md:order-2 mr-[1rem]">
+          <button type="button" class="transform active:scale-75 transition-transform duration-500 text-sm " id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+          <div class="inline-flex overflow-hidden relative justify-center items-center w-10 h-10 bg-gray-200 ring-2 ring-gray-300 rounded-full">
+              <span class="font-medium text-gray-600">CC</span>
+          </div>
+
+          </button>
+          
+          <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-200 px-2 rounded shadow-md" id="user-dropdown">
+          <div class="px-3 py-5">
+              <span class="block text-xl font-semibold text-gray-900 capitalize">Checca Chen</span>
+          </div>
+          <ul class="pt-4 pb-2" aria-labelledby="user-menu-button">
+              <li>
+                  <a href="#" class="user-menu-list flex justify-between items-center">
+                      <span class="flex-1 whitespace-nowrap flex gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#e84949" d="M6 19v1q0 .425-.287.712Q5.425 21 5 21H4q-.425 0-.712-.288Q3 20.425 3 20v-8l2.1-6q.15-.45.538-.725Q6.025 5 6.5 5h11q.475 0 .863.275q.387.275.537.725l2.1 6v8q0 .425-.288.712Q20.425 21 20 21h-1q-.425 0-.712-.288Q18 20.425 18 20v-1Zm-.2-9h12.4l-1.05-3H6.85Zm1.7 6q.625 0 1.062-.438Q9 15.125 9 14.5t-.438-1.062Q8.125 13 7.5 13t-1.062.438Q6 13.875 6 14.5t.438 1.062Q6.875 16 7.5 16Zm9 0q.625 0 1.062-.438Q18 15.125 18 14.5t-.438-1.062Q17.125 13 16.5 13t-1.062.438Q15 13.875 15 14.5t.438 1.062Q15.875 16 16.5 16Z"/></svg>
+                          Reserved Car</span>
+                          
+                              
+                          <span class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-accent-regular bg-accent-verylight rounded-full">3</span>
+                             
+                          
+                  </a>
+              </li>
+              <li>
+                  <a href="{{url('profile')}}" class="user-menu-list flex items-center ">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="#e84949"><path fill-rule="evenodd" d="M24 42c9.941 0 18-8.059 18-18S33.941 6 24 6S6 14.059 6 24s8.059 18 18 18Zm0 2c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20Z" clip-rule="evenodd"/><path d="M12 35.63c0-1.033.772-1.906 1.8-2.02c7.715-.854 12.72-.777 20.418.019a1.99 1.99 0 0 1 1.108 3.472c-9.085 7.919-14.277 7.81-22.686.008c-.41-.38-.64-.92-.64-1.478Z"/><path fill-rule="evenodd" d="M34.115 34.623c-7.637-.79-12.57-.864-20.206-.019A1.028 1.028 0 0 0 13 35.631c0 .286.119.557.32.745c4.168 3.866 7.326 5.613 10.413 5.624c3.098.011 6.426-1.722 10.936-5.652a.99.99 0 0 0-.554-1.724ZM13.69 32.616c7.796-.863 12.874-.785 20.632.018a2.99 2.99 0 0 1 1.662 5.221c-4.575 3.988-8.385 6.16-12.257 6.145c-3.883-.014-7.525-2.223-11.766-6.158A3.018 3.018 0 0 1 11 35.63a3.028 3.028 0 0 1 2.69-3.015Z" clip-rule="evenodd"/><path d="M32 20a8 8 0 1 1-16 0a8 8 0 0 1 16 0Z"/><path fill-rule="evenodd" d="M24 26a6 6 0 1 0 0-12a6 6 0 0 0 0 12Zm0 2a8 8 0 1 0 0-16a8 8 0 0 0 0 16Z" clip-rule="evenodd"/></g></svg>
+                  <span class="whitespace-nowrap ml-1">Profile</span>
+                  </a>
+              </li>
+              <li>
+                  <form method="POST" action="{{ route('logout') }}">
+                      <a href="{{url('arkilla-logout')}}" class="user-menu-list flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="inline" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#e84949" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2a9.985 9.985 0 0 1 8 4h-2.71a8 8 0 1 0 .001 12h2.71A9.985 9.985 0 0 1 12 22zm7-6v-3h-8v-2h8V8l5 4l-5 4z"/></svg>
+                      <span class="whitespace-nowrap ml-1">Log out</span>
+                      </a>
+                  </form>
+              </li>
+          </ul>
+          </div>
+          <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+      </div>
+     
+      <div class="flex justify-between gap-3">
+          <a href="#"><button class="front-login btn-1 btn-non-orange" >Login</button></a>
+          <a href="#"><button class="front-signup btn-1 btn-orange-1" >Sign up</button></a>
+      </div>
+    
+  </div>
+</nav>
+
+
+<main id="home">
+  <!-- Hero section -->
+  <section class="relative text-white h-[100vmin] md:h-[calc(100vmin-5.5rem)]">
+      <img class="w-full h-full object-cover" src="./assets/image/red-car-home.jpg" alt="hero image">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="flex flex-col gap-4 w-auto sm:w-1/2  absolute top-1/3 -translate-y-1/3 left-8 md:left-32 font-[800] font-['Montserrat',sans-serif]">
+          <h1 class="text-[2rem] sm:text-[3rem] lg:text-[4.5rem] leading-none font-['Roboto',sans-serif] font-[600] ">Welcome</h1>
+          <h2 class="text-[.8rem] sm:text-[1.2rem] leading-6">Find the best deal on rental cars <br> and drive to your destination</h2>
+          <p class="text-[.8rem] sm:text-[1rem] font-[400]">Sedan cars at low cost, <br> starts at ₱1500.00</p>
+          <a href="{{url('/cars')}}"><button class="btn-1 bg-accent-regular uppercase border-none w-[fit-content] sm:mt-6 text-[.7rem] lg:text-[1rem]">Find a car</button></a>
+      </div>
+  </section>
+
+  <!-- Ride with our service section -->
+  <section class="bg-white p-6 sm:p-14 flex flex-col gap-6 sm:gap-24 justify-between">
+      <div class="font-bold">
+          <p class="text-center text-accent-regular text-[1.2rem] lg:text-[1.75rem]">Ride with</p>
+          <h2 class="text-center text-[1.5rem] lg:text-[2.5rem] uppercase leading-none">Our Services</h2>
+      </div>
+      <div class="flex justify-center flex-wrap sm:flex-nowrap text-center">
+          <div class="max-w-[400px] py-6 sm:px-6 border-t border-t-accent-regular sm:border-t-0 sm:border-r sm:border-r-accent-regular">
+              <div class="flex justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16"  viewBox="0 0 640 512"><path fill="#e84949"   d="M171.3 96H224v96H111.3l30.4-75.9C146.5 104 158.2 96 171.3 96zM272 192V96h81.2c9.7 0 18.9 4.4 25 12l67.2 84H272zm256.2 1l-100-125c-18.2-22.8-45.8-36-75-36H171.3C132 32 96.7 55.9 82.2 92.3L40.6 196.4C16.8 205.8 0 228.9 0 256v112c0 17.7 14.3 32 32 32h33.3c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80h130.6c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80H608c17.7 0 32-14.3 32-32v-48c0-65.2-48.8-119-111.8-127zm-2.9 207c-6.6 18.6-24.4 32-45.3 32s-38.7-13.4-45.3-32c-1.8-5-2.7-10.4-2.7-16c0-26.5 21.5-48 48-48s48 21.5 48 48c0 5.6-1 11-2.7 16zM160 432c-20.9 0-38.7-13.4-45.3-32c-1.8-5-2.7-10.4-2.7-16c0-26.5 21.5-48 48-48s48 21.5 48 48c0 5.6-1 11-2.7 16c-6.6 18.6-24.4 32-45.3 32z"/></svg>
+              </div>
+              <!-- <i class='bx bxs-truck text-accent-regular text-[4rem]'></i> -->
+              <h3 class="mb-3 text-[1.2rem] lg:text-[1.5rem] font-bold">Service 1</h3>
+              <p class="font-medium ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptates quae pariatur facilis nihil incidunt. Quia unde fugit recusandae iste.</p>
+          </div>
+          <div class="max-w-[400px] py-6 sm:px-6 border-t border-t-accent-regular sm:border-t-0">
+              <div class="flex justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16"  viewBox="0 0 640 512"><path fill="#e84949"   d="M171.3 96H224v96H111.3l30.4-75.9C146.5 104 158.2 96 171.3 96zM272 192V96h81.2c9.7 0 18.9 4.4 25 12l67.2 84H272zm256.2 1l-100-125c-18.2-22.8-45.8-36-75-36H171.3C132 32 96.7 55.9 82.2 92.3L40.6 196.4C16.8 205.8 0 228.9 0 256v112c0 17.7 14.3 32 32 32h33.3c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80h130.6c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80H608c17.7 0 32-14.3 32-32v-48c0-65.2-48.8-119-111.8-127zm-2.9 207c-6.6 18.6-24.4 32-45.3 32s-38.7-13.4-45.3-32c-1.8-5-2.7-10.4-2.7-16c0-26.5 21.5-48 48-48s48 21.5 48 48c0 5.6-1 11-2.7 16zM160 432c-20.9 0-38.7-13.4-45.3-32c-1.8-5-2.7-10.4-2.7-16c0-26.5 21.5-48 48-48s48 21.5 48 48c0 5.6-1 11-2.7 16c-6.6 18.6-24.4 32-45.3 32z"/></svg>
+              </div>
+              <h3 class="mb-3 text-[1.2rem] lg:text-[1.5rem] font-bold">Service 2</h3>
+              <p class="font-medium ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptates quae pariatur facilis nihil incidunt. Quia unde fugit recusandae iste.</p>
+          </div>
+          <div class="max-w-[400px] pt-6 lg:px-6 border-t border-t-accent-regular sm:border-t-0  sm:border-l sm:border-l-accent-regular">
+              <div class="flex justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16"  viewBox="0 0 640 512"><path fill="#e84949"   d="M171.3 96H224v96H111.3l30.4-75.9C146.5 104 158.2 96 171.3 96zM272 192V96h81.2c9.7 0 18.9 4.4 25 12l67.2 84H272zm256.2 1l-100-125c-18.2-22.8-45.8-36-75-36H171.3C132 32 96.7 55.9 82.2 92.3L40.6 196.4C16.8 205.8 0 228.9 0 256v112c0 17.7 14.3 32 32 32h33.3c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80h130.6c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80H608c17.7 0 32-14.3 32-32v-48c0-65.2-48.8-119-111.8-127zm-2.9 207c-6.6 18.6-24.4 32-45.3 32s-38.7-13.4-45.3-32c-1.8-5-2.7-10.4-2.7-16c0-26.5 21.5-48 48-48s48 21.5 48 48c0 5.6-1 11-2.7 16zM160 432c-20.9 0-38.7-13.4-45.3-32c-1.8-5-2.7-10.4-2.7-16c0-26.5 21.5-48 48-48s48 21.5 48 48c0 5.6-1 11-2.7 16c-6.6 18.6-24.4 32-45.3 32z"/></svg>
+              </div>
+              <h3 class="mb-3 text-[1.2rem] lg:text-[1.5rem] font-bold">Service 3</h3>
+              <p class="font-medium ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptates quae pariatur facilis nihil incidunt. Quia unde fugit recusandae iste.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- How to rent a car section -->
+  <section class="bg-[#F5F5F5] px-6 pb-14 sm:p-14 gap-4 grid sm:grid-cols-2 lg:grid-cols-4">
+      <div class="py-10  sm:h-[400px] sm:flex sm:flex-col sm:justify-end">
+          <p class="text-accent-regular text-[1.2rem] font-medium whitespace-nowrap">How to rent a Car?</p>
+          <p class="whitespace-nowrap sm:mb-8 font-bold text-[1.2rem] sm:text-[1.75rem]">Experience with <br>
+          our car rental <br>
+          <span class="relative before:content-[''] before:absolute before:-bottom-2 before:left-0 before:h-[3px] before:w-1/2 before:bg-accent-regular">offer</span></p>
+      </div>
+      <div class="py-10 px-8 sm:h-[400px] bg-white relative before:absolute before:left-0 before:-bottom-[2px] before:content-[''] before:h-[3px] before:w-full before:bg-accent-regular before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500">
+          <h2 class="text-accent-regular text-[1.2rem] sm:text-[1.75rem] mb-3">01</h2>
+          <div >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 -ml-2" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14q-.425 0-.712-.288Q11 13.425 11 13t.288-.713Q11.575 12 12 12t.713.287Q13 12.575 13 13t-.287.712Q12.425 14 12 14Zm-4 0q-.425 0-.713-.288Q7 13.425 7 13t.287-.713Q7.575 12 8 12t.713.287Q9 12.575 9 13t-.287.712Q8.425 14 8 14Zm8 0q-.425 0-.712-.288Q15 13.425 15 13t.288-.713Q15.575 12 16 12t.712.287Q17 12.575 17 13t-.288.712Q16.425 14 16 14Zm-4 4q-.425 0-.712-.288Q11 17.425 11 17t.288-.712Q11.575 16 12 16t.713.288Q13 16.575 13 17t-.287.712Q12.425 18 12 18Zm-4 0q-.425 0-.713-.288Q7 17.425 7 17t.287-.712Q7.575 16 8 16t.713.288Q9 16.575 9 17t-.287.712Q8.425 18 8 18Zm8 0q-.425 0-.712-.288Q15 17.425 15 17t.288-.712Q15.575 16 16 16t.712.288Q17 16.575 17 17t-.288.712Q16.425 18 16 18ZM5 22q-.825 0-1.413-.587Q3 20.825 3 20V6q0-.825.587-1.412Q4.175 4 5 4h1V3q0-.425.287-.713Q6.575 2 7 2t.713.287Q8 2.575 8 3v1h8V3q0-.425.288-.713Q16.575 2 17 2t.712.287Q18 2.575 18 3v1h1q.825 0 1.413.588Q21 5.175 21 6v14q0 .825-.587 1.413Q19.825 22 19 22Zm0-2h14V10H5v10Z"/></svg>
+          </div>
+          <!-- <i class='bx bx-calendar text-[3.5rem] relative -left-2'></i> -->
+          <h3 class="font-bold mb-3">Find a car</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, corporis!</p>
+      </div>
+      <div class="py-10 px-8 sm:h-[400px] bg-white relative before:absolute before:left-0 before:-bottom-[2px] before:content-[''] before:h-[3px] before:w-full before:bg-accent-regular before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500">
+          <h2 class="text-accent-regular text-[1.2rem] sm:text-[1.75rem] mb-3">02</h2>
+          <div >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 -ml-2" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14q-.425 0-.712-.288Q11 13.425 11 13t.288-.713Q11.575 12 12 12t.713.287Q13 12.575 13 13t-.287.712Q12.425 14 12 14Zm-4 0q-.425 0-.713-.288Q7 13.425 7 13t.287-.713Q7.575 12 8 12t.713.287Q9 12.575 9 13t-.287.712Q8.425 14 8 14Zm8 0q-.425 0-.712-.288Q15 13.425 15 13t.288-.713Q15.575 12 16 12t.712.287Q17 12.575 17 13t-.288.712Q16.425 14 16 14Zm-4 4q-.425 0-.712-.288Q11 17.425 11 17t.288-.712Q11.575 16 12 16t.713.288Q13 16.575 13 17t-.287.712Q12.425 18 12 18Zm-4 0q-.425 0-.713-.288Q7 17.425 7 17t.287-.712Q7.575 16 8 16t.713.288Q9 16.575 9 17t-.287.712Q8.425 18 8 18Zm8 0q-.425 0-.712-.288Q15 17.425 15 17t.288-.712Q15.575 16 16 16t.712.288Q17 16.575 17 17t-.288.712Q16.425 18 16 18ZM5 22q-.825 0-1.413-.587Q3 20.825 3 20V6q0-.825.587-1.412Q4.175 4 5 4h1V3q0-.425.287-.713Q6.575 2 7 2t.713.287Q8 2.575 8 3v1h8V3q0-.425.288-.713Q16.575 2 17 2t.712.287Q18 2.575 18 3v1h1q.825 0 1.413.588Q21 5.175 21 6v14q0 .825-.587 1.413Q19.825 22 19 22Zm0-2h14V10H5v10Z"/></svg>
+          </div>
+          <h3 class="font-bold mb-3">Pick a car</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, corporis!</p>
+      </div>
+      <div class="py-10 px-8 sm:h-[400px] bg-white relative before:absolute before:left-0 before:-bottom-[2px] before:content-[''] before:h-[3px] before:w-full before:bg-accent-regular before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500">
+          <h2 class="text-accent-regular text-[1.2rem] sm:text-[1.75rem] mb-3">03</h2>
+          <div >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 -ml-2" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14q-.425 0-.712-.288Q11 13.425 11 13t.288-.713Q11.575 12 12 12t.713.287Q13 12.575 13 13t-.287.712Q12.425 14 12 14Zm-4 0q-.425 0-.713-.288Q7 13.425 7 13t.287-.713Q7.575 12 8 12t.713.287Q9 12.575 9 13t-.287.712Q8.425 14 8 14Zm8 0q-.425 0-.712-.288Q15 13.425 15 13t.288-.713Q15.575 12 16 12t.712.287Q17 12.575 17 13t-.288.712Q16.425 14 16 14Zm-4 4q-.425 0-.712-.288Q11 17.425 11 17t.288-.712Q11.575 16 12 16t.713.288Q13 16.575 13 17t-.287.712Q12.425 18 12 18Zm-4 0q-.425 0-.713-.288Q7 17.425 7 17t.287-.712Q7.575 16 8 16t.713.288Q9 16.575 9 17t-.287.712Q8.425 18 8 18Zm8 0q-.425 0-.712-.288Q15 17.425 15 17t.288-.712Q15.575 16 16 16t.712.288Q17 16.575 17 17t-.288.712Q16.425 18 16 18ZM5 22q-.825 0-1.413-.587Q3 20.825 3 20V6q0-.825.587-1.412Q4.175 4 5 4h1V3q0-.425.287-.713Q6.575 2 7 2t.713.287Q8 2.575 8 3v1h8V3q0-.425.288-.713Q16.575 2 17 2t.712.287Q18 2.575 18 3v1h1q.825 0 1.413.588Q21 5.175 21 6v14q0 .825-.587 1.413Q19.825 22 19 22Zm0-2h14V10H5v10Z"/></svg>
+          </div>
+          <h3 class="font-bold mb-3">Book a car</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, corporis!</p>
+      </div>
+  </section>
+
+  <!-- Become a car owner section -->
+  <section class="bg-white p-6 sm:p-14 grid gap-8 md:grid-cols-2">
+      <div class="sm:h-[fit-content] relative">
+          <div class="mb-16 lg:-translate-y-6">
+              <h2 class="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] font-bold whitespace-nowrap ">Lorem ipsum <br>
+               dolor sit amet, <br>
+                <span class="relative before:content-[''] before:absolute before:-bottom-2 before:left-0 before:h-[3px] before:w-1/4 before:bg-accent-regular">consectetur.</span> </h2>
+          </div>
+          <div>
+              <ul class="grid sm:grid-cols-2 gap-y-8 gap-x-4">
+                  <li class="flex gap-2 items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-14 md:w-14"  viewBox="0 0 24 24"><path fill="#e84949" d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg><span>Lorem ipsum dolor sit amet consectetur.</span>
+                  </li>
+                  <li class="flex gap-2 items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-14 md:w-14"  viewBox="0 0 24 24"><path fill="#e84949" d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg>    
+                      <span>Lorem ipsum dolor sit amet consectetur.</span></li>
+                  <li class="flex gap-2 items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-14 md:w-14"  viewBox="0 0 24 24"><path fill="#e84949" d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg>    
+                      <span>Lorem ipsum dolor sit amet consectetur.</span></li>
+                  <li class="flex gap-2 items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-14 md:w-14"  viewBox="0 0 24 24"><path fill="#e84949" d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg>    
+                      <span>Lorem ipsum dolor sit amet consectetur.</span></li>
+                  <li class="flex gap-2 items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-14 md:w-14"  viewBox="0 0 24 24"><path fill="#e84949" d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg>    
+                      <span>Lorem ipsum dolor sit amet consectetur.</span></li>
+                  <li class="flex gap-2 items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 md:h-14 md:w-14"  viewBox="0 0 24 24"><path fill="#e84949" d="m10.6 13.8l-2.175-2.175q-.275-.275-.675-.275t-.7.3q-.275.275-.275.7q0 .425.275.7L9.9 15.9q.275.275.7.275q.425 0 .7-.275l5.675-5.675q.275-.275.275-.675t-.3-.7q-.275-.275-.7-.275q-.425 0-.7.275ZM12 22q-2.075 0-3.9-.788q-1.825-.787-3.175-2.137q-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175q1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138q1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175q-1.35 1.35-3.175 2.137Q14.075 22 12 22Z"/></svg>    
+                      <span>Lorem ipsum dolor sit amet consectetur.</span></li>
+              </ul>
+          </div>
+      </div>
+      <div class="max-h-[500px] relative">
+          <img class="w-full h-full object-cover" src="./assets/image/become.jpg" alt="">
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="absolute top-[10%] sm:top-1/4 lg:top-1/2 left-1/2 translate-x-[-50%] w-[90%] md:w-9/12 ">
+              <p class="text-center text-white mb-4 lg:mb-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quaerat accusantium dolor assumenda fuga qui illum maxime deleniti dolorum impedit! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, sit. </p>
+              <a href="{{url('admin/login')}}"><button class=" btn-orange-sidebar w-[fit-content] lg:w-[300px] outline-offset-0 whitespace-nowrap mx-auto block">Become a car rental owner</button></a>
+          </div>
+      </div>
+
+  </section>
+
+  <!-- Book Now section -->
+  <section class="bg-white p-6 sm:p-14 sm:pb-28 grid gap-16 md:grid-cols-2">  
+      <div class="h-[200px] sm:h-[fit-content] lg:h-screen relative">
+          <img class="w-full h-full object-cover" src="./assets/image/booknow.png" alt="">
+          <div class="absolute inset-0 bg-black/40"></div>
+          <img class="absolute top-full left-0 w-full -translate-y-[70%]" src="./assets/image/red_car_booknow.png" alt="">
+      </div>
+      <div class="h-[fit-content] lg:h-screen relative ">
+          <div class="mb-16 lg:-translate-y-5">
+              <h2 class="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] font-bold whitespace-nowrap ">Lorem ipsum <br>
+               dolor sit amet, <br>
+                <span class="relative before:content-[''] before:absolute before:-bottom-2 before:left-0 before:h-[3px] before:w-1/4 before:bg-accent-regular">consectetur.</span> </h2>
+          </div>
+          <div>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam blanditiis, est officia cupiditate provident totam aspernatur, voluptate officiis id temporibus reprehenderit quos repellendus vitae recusandae! Eos unde necessitatibus, nostrum rem nobis eligendi harum rerum, inventore impedit, reprehenderit maiores consequuntur. Animi.</p>
+             <button class="btn-1 bg-accent-regular uppercase border-none w-[fit-content] text-white mt-6">Book now</button>
+          </div>
+      </div>
+  </section>
+
+  <!-- Frequently ask section -->
+  <section class="bg-white p-6 sm:p-14 grid gap-8 md:grid-cols-2">  
+      <div class="sm:h-[100vh] relative order-2 sm:order-1">
+          <div class="mb-16 lg:-translate-y-4">
+              <h2 class="text-[1.5rem] sm:text-[2rem] lg:text-[3rem] font-bold whitespace-nowrap">
+               Frequently Asked <br>
+                <span class="relative before:content-[''] before:absolute before:-bottom-2 before:left-0 before:h-[3px] before:w-1/4 before:bg-accent-regular">Questions</span> </h2>
+          </div>
+          <div class="grid gap-8">
+             <p class="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+             <p class="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+             <p class="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+             <button type="button" class="btn-1 text-accent-regular border border-accent-regular hover:bg-accent-regular hover:text-white font-semibold rounded-full  p-2.5 text-center inline-flex items-center w-[fit-content]">
+              <span class="mr-3">More FAQs</span>
+              <svg aria-hidden="true" class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </div>
+      </div> 
+      <div class="h-[200px] sm:h-[100vh] relative order-1 sm:order-2">
+          <img class="w-full h-full object-cover" src="./assets/image/faqs.jpg" alt="">
+          <div class="absolute inset-0 bg-black/40"></div>
+      </div>  
+  </section>
+</main>
+
+<footer class="bg-[#1F1F1F] text-white">
+  <div class="grid md:grid-cols-3 p-6 sm:p-14">
+      <div class="text-center md:text-left mb-12 md:mb-0">
+          <h3 class=" lg:text-[1.5rem] uppercase font-bold text-accent-regular">About us</h3>
+          <div class="grid gap-12 mt-4">   
+              <p class="text-xs sm:text-base">Lorem ipsum dolor sit amet <br>
+               consectetur adipisicing elit.</p>
+              <div class="mt-auto grid grid-cols-4  md:block text-center md:text-left">
+                  
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 col-span-1 inline-block mr-4 justify-self-center" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#e84949" d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814a11.874 11.874 0 0 1-8.62-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101a4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732a11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9c0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 col-span-1 inline mr-4 justify-self-center" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#e84949" d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 col-span-1 inline mr-4 justify-self-center" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"><path fill="#e84949" d="M160 128a32 32 0 1 1-32-32a32.1 32.1 0 0 1 32 32Zm68-44v88a56 56 0 0 1-56 56H84a56 56 0 0 1-56-56V84a56 56 0 0 1 56-56h88a56 56 0 0 1 56 56Zm-52 44a48 48 0 1 0-48 48a48 48 0 0 0 48-48Zm16-52a12 12 0 1 0-12 12a12 12 0 0 0 12-12Z"/></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 col-span-1 inline mr-4 justify-self-center" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#e84949" d="M4 20q-.825 0-1.412-.587Q2 18.825 2 18V6q0-.825.588-1.412Q3.175 4 4 4h16q.825 0 1.413.588Q22 5.175 22 6v12q0 .825-.587 1.413Q20.825 20 20 20Zm8-7.175q.125 0 .262-.038q.138-.037.263-.112L19.6 8.25q.2-.125.3-.312q.1-.188.1-.413q0-.5-.425-.75T18.7 6.8L12 11L5.3 6.8q-.45-.275-.875-.013Q4 7.05 4 7.525q0 .25.1.437q.1.188.3.288l7.075 4.425q.125.075.263.112q.137.038.262.038Z"/></svg>
+              </div>
+          </div>
+      </div>
+      <div class="text-center md:text-left mb-12 md:mb-0">
+          <h3 class="lg:text-[1.5rem] uppercase font-bold text-accent-regular">Explore</h3>
+         <ul class="mt-4 grid md:gap-4 grid-cols-4 md:grid-cols-1 ">
+          <li class="text-center md:text-left border-r-2 md:border-r-0"><a href="{{url('/')}}" class="relative before:absolute before:left-0 before:-bottom-[4px] before:content-[''] before:h-[2px] before:w-full before:bg-accent-regular before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500 font-bold home text-xs sm:text-base">Home</a></li>
+          <li class="text-center md:text-left border-r-2 md:border-r-0"><a href="{{url('/cars')}}"  class="relative before:absolute before:left-0 before:-bottom-[4px] before:content-[''] before:h-[2px] before:w-full before:bg-accent-regular before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500 font-bold cars text-xs sm:text-base">Cars</a></li>
+          <li class="text-center md:text-left border-r-2 md:border-r-0"><a href="{{url('/about')}}" class="relative before:absolute before:left-0 before:-bottom-[4px] before:content-[''] before:h-[2px] before:w-full before:bg-accent-regular before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500 font-bold about text-xs sm:text-base">About</a></li>
+          <li class="text-center md:text-left"><a href="{{url('/contact')}}" class="relative before:absolute before:left-0 before:-bottom-[4px] before:content-[''] before:h-[2px] before:w-full before:bg-accent-regular before:scale-x-0 before:origin-right hover:before:scale-x-100 hover:before:origin-left before:transition-transform before:duration-500 font-bold contact text-xs sm:text-base">Contact</a></li>
+         </ul>
+      </div>
+      <div class="text-center md:text-left">
+          <h3 class="lg:text-[1.5rem] uppercase font-bold text-accent-regular">Contact us</h3>
+          <p class="mt-4 whitespace-nowrap text-xs sm:text-base "><span class="font-bold">Address </span>Lorem ipsum dolor sit <br>
+           amet consectetur adipisicing elit.</p>
+         <ul class="mt-4 grid gap-4 text-xs sm:text-base">
+              <li class="flex gap-2 justify-center md:justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g transform="translate(24 0) scale(-1 1)"><path fill="#e84949" d="M4.05 21q-.45 0-.75-.3t-.3-.75V15.9q0-.35.225-.613q.225-.262.575-.337l3.45-.7q.35-.05.713.062q.362.113.587.338L10.9 17q1.9-1.15 3.475-2.725Q15.95 12.7 17 10.9l-2.4-2.45q-.225-.225-.288-.513q-.062-.287-.012-.637l.65-3.5q.05-.35.325-.575Q15.55 3 15.9 3h4.05q.45 0 .75.3t.3.75q0 3.225-1.438 6.287q-1.437 3.063-3.8 5.425q-2.362 2.363-5.424 3.8Q7.275 21 4.05 21Z"/></g></svg><span>09123456789</span>
+              </li>
+              <li class="flex gap-2 justify-center md:justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="#e84949" d="M10.5 20h3q.2 0 .35-.15q.15-.15.15-.35q0-.2-.15-.35q-.15-.15-.35-.15h-3q-.2 0-.35.15q-.15.15-.15.35q0 .2.15.35q.15.15.35.15ZM7 23q-.825 0-1.412-.587Q5 21.825 5 21V3q0-.825.588-1.413Q6.175 1 7 1h10q.825 0 1.413.587Q19 2.175 19 3v18q0 .825-.587 1.413Q17.825 23 17 23Zm0-7h10V6H7Z"/></svg><span>09123456789</span>
+              </li>
+              <li class="flex gap-2 justify-center md:justify-start">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="-2 -2.5 24 24"><path fill="#e84949" d="M3.656 17.979A1 1 0 0 1 2 17.243V15a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8.003l-4.347 2.979zM16 10.017a7.136 7.136 0 0 0 0 .369v-.37c.005-.107.006-1.447.004-4.019a3 3 0 0 0-3-2.997H5V2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2v2.243a1 1 0 0 1-1.656.736L16 13.743v-3.726z"/></svg><span>09123456789</span>
+              </li>
+          
+         </ul>
+      </div>
+
+  </div>
+  <div class="p-6 sm:px-14 bg-black">
+      <p class="text-center sm:text-left text-xs sm:text-base">2022 All Rights Reserve <span class="text-accent-regular whitespace-nowrap">Terms of Use</span></p>
+
+  </div>
+</footer>
+
+      <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+      <script src="./js/index.js"></script>
+</body>
+</html>
